@@ -116,3 +116,80 @@ let userProfile = {};
 userProfile[propertyName] = "Jacob Tham";
 
 console.log(userProfile);
+
+// ! Exercise 8:
+// a. Create a function with two parameters, `noun` and `adjective`.
+//
+// b. Give `noun` a default value of "cat" and `adjective` a default value of
+//    "orange".
+//
+// c. The function should log a sentence 'The cat is orange.' by default, but
+//    should substitute the appropriate parameters when it is supplied with
+//    arguments.
+//
+// Your code here:
+
+const noun = "cat";
+const adjective = "orange";
+
+const twoParam = (noun, adjective) => {
+  console.log(`The ${noun} is ${adjective}.`);
+};
+
+twoParam(noun, adjective);
+
+// ! Exercise 9:
+// a. Convert the following `if...else` statement into a ternary:
+//
+//    if (pizza === 'tasty') {
+//      console.log('yum');
+//    } else {
+//      console.log('yuck');
+//    }
+//
+// Starting code (don't modify this):
+
+const pizza = "tasty";
+
+// Your code here:
+
+console.log(pizza === "tasty" ? "yum" : "yuck");
+
+// ! Exercise 10:
+// ! 10.1: Set language
+// a. Construct a single line of code that assigns a default value using the
+//    logical OR operator. This line should match the logic of the following
+//    statement:
+//
+//    "lang is equal to localLangConfig or the default value of English."
+//
+// b. Create a variable called `lang`.
+//
+// c. Assign `lang` the value of localLangConfig or 'en' as a default if
+//    `localLangConfig is falsy.
+//
+// d. Log the value of `lang` to the console.
+//
+// Your code here (localLangConfig is provided to get you started):
+
+// Simulated language configuration (change this variable to test)
+const localLangConfig = null; // Change to 'es', 'fr', etc., or leave it `null`.
+
+let lang = "en";
+console.log(
+  lang === localLangConfig ? (lang = lang) : (lang = localLangConfig)
+);
+
+// ! Exercise 11:
+// a. Use optional chaining in a console.log so that a console log of
+//    `adventurer.cat.age` returns `undefined` instead of an error.
+//
+// Starting code (don't modify this):
+
+const adventurer = {
+  name: "Alice",
+};
+
+// Your code here:
+
+console.log(adventurer.cat?.age);
