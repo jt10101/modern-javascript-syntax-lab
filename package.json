@@ -16,5 +16,6 @@
     "url": "https://github.com/jt10101/modern-javascript-syntax-lab/issues"
   },
   "homepage": "https://github.com/jt10101/modern-javascript-syntax-lab#readme",
-  "description": ""
+  "description": "",
+  "type": "module"
 }

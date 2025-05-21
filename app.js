@@ -173,12 +173,10 @@ console.log(pizza === "tasty" ? "yum" : "yuck");
 // Your code here (localLangConfig is provided to get you started):
 
 // Simulated language configuration (change this variable to test)
-const localLangConfig = null; // Change to 'es', 'fr', etc., or leave it `null`.
+const localLangConfig = ""; // Change to 'es', 'fr', etc., or leave it `null`.
 
-let lang = "en";
-console.log(
-  lang === localLangConfig ? (lang = lang) : (lang = localLangConfig)
-);
+const lang = localLangConfig || "en";
+console.log(lang);
 
 // ! Exercise 11:
 // a. Use optional chaining in a console.log so that a console log of
