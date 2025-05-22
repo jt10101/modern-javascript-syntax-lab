@@ -12,13 +12,8 @@
 const nums = [13, 87, 2, 89, 12, 4, 90, 63];
 
 // Your code here:
-const numsTimesTwo = [];
 
-nums.map((x) => {
-  numsTimesTwo.push(x * 2);
-});
-
-console.log(numsTimesTwo);
+console.log(nums.map((x) => x * 2));
 
 // ! Exercise 2:
 // a. Given the provided `pizzaToppings` array, use destructuring to extract
@@ -34,9 +29,7 @@ const pizzaToppings = ["Pineapple", "Olives", "Anchovies"];
 
 // Your code here:
 
-let firstIngredient = pizzaToppings[0];
-let secondIngredient = pizzaToppings[1];
-
+const [firstIngredient, secondIngredient] = pizzaToppings;
 console.log(firstIngredient, secondIngredient);
 
 // ! Exercise 3:
@@ -53,8 +46,8 @@ const car = {
 };
 
 // Your code here:
-let make = car.make;
-let model = car.model;
+
+const { make, model } = car;
 
 console.log(make, model);
 
@@ -70,7 +63,6 @@ const morePizzaToppings = ["Cheese", "Sauce"];
 
 // Your code here:
 const uncontroversialPizzaToppings = [...morePizzaToppings];
-
 console.log(uncontroversialPizzaToppings);
 
 // ! Exercise 5:
@@ -91,10 +83,7 @@ const anotherCar = {
 
 // Your code here:
 
-let myCar = { ...anotherCar };
-myCar.make = "BMW";
-myCar.model = "X5";
-
+let myCar = { ...anotherCar, make: "BMW", model: "X5" };
 console.log(myCar, anotherCar);
 
 // ! Exercise 6:
@@ -110,12 +99,12 @@ console.log(myCar, anotherCar);
 //
 // Your code here:
 
-let propertyName = "username";
-let userProfile = {};
+// let propertyName = "username";
+let userProfile = { propertyName: "username" };
 
-userProfile[propertyName] = "Jacob Tham";
+// userProfile[propertyName] = "Jacob Tham";
 
-console.log(userProfile);
+console.log({ ...userProfile, propertyName: "Jacob Tham" });
 
 // ! Exercise 8:
 // a. Create a function with two parameters, `noun` and `adjective`.
@@ -129,14 +118,11 @@ console.log(userProfile);
 //
 // Your code here:
 
-const noun = "cat";
-const adjective = "orange";
-
 const twoParam = (noun, adjective) => {
   console.log(`The ${noun} is ${adjective}.`);
 };
 
-twoParam(noun, adjective);
+twoParam("cat", "orange");
 
 // ! Exercise 9:
 // a. Convert the following `if...else` statement into a ternary:
